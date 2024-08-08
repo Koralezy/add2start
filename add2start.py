@@ -71,3 +71,4 @@ except: err("Unable to find file/folder. Did you type the path in correctly?")
 shortcut.save()
 
 print(tname, "has been added to the Start Menu!")
+time.sleep(5)
