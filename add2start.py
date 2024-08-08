@@ -1,7 +1,15 @@
+import subprocess
+import sys
 import os
-import json
-from win32com.client import Dispatch
 import time
+import json
+
+try:
+    from win32com.client import Dispatch
+except:
+    i = input("You don't have the pywin32 module, which is required for this to work. Press ENTER to install!")
+    if i == "" or i != "":
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "pywin32"])
 
 while True:
     target = input("Type the file/folder path here: ")
